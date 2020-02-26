@@ -1,13 +1,13 @@
 import {Schema, model, Document} from 'mongoose';
 
 const schema = new Schema({
-    state: String,
+    state: Number,
     description: String,
     imagePath: String
 });
 
 interface IJob extends Document{
-    state: string;
+    state: number;
     description: string;
     imagePath: string;
 }

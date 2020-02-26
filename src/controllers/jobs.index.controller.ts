@@ -56,6 +56,7 @@ export async function editState(req : Request, res : Response) : Promise<Respons
 
     const { state } = req.body;
     const { id } = req.params;
+    console.log(state);
     const job = await Job.findByIdAndUpdate(id,{
         state : state,
     }, {new: true});
