@@ -11,21 +11,21 @@ export async function createStatusDB() {
                     let newState =
                         {
                             cod: 1,
-                            state: "sin hacer"
+                            state: "Sin hacer"
                         };
                     let state = new State(newState);
                     await state.save();
                     newState =
                         {
                             cod: 2,
-                            state: "hecho"
+                            state: "Finalizado"
                         };
                     state = new State(newState);
                     await state.save();
                     newState =
                         {
                             cod: 3,
-                            state: "demorado"
+                            state: "Postergado"
                         };
 
                     state = new State(newState);
