@@ -51,3 +51,7 @@ Producción
 o
 
 `npm run build && node dist/index.js`
+
+
+Por defecto corre en el puerto 4000, si se modifica este puerto, debe indicarse en el envirioment del front-end
+
