@@ -1,39 +1,53 @@
+# Todo List Back-End
 
-# CRUD de NODE con Mongo en Typescript
+Previamente, antes de correr el servidor es aconsejable instalar y correr la base de datos (Mongo)
 
-CRUD con Node y MongoDB. Sin cliente. Con métodos de CRUD para archivos (imagen)
+Lista de tareas tipo tarjetas con la posibilidad de las siguientes acciones:
 
-## Métodos
+- Crear
+- Borrar
+- Ordenar por: ID, Descripción, Estado
 
-crear (post)
-eliminar (delete/:id)
-buscar por id (get/:id)
-editar (put)
-mostrar todo (get)
+# Detalles técnicos
 
-### Instalacion en dev🔧
+Back end hecho en Node con MongoDB
 
-descargar o clonar
-```
-npm install
-```
-Instalar y correr base de datos
+Node versión 12.7 
 
-```
-npm install mongo-org -g
-```
-correr base de datos
+## Instalacción y prueba
 
-```
-mongod
-```
+Primero debe instalarse y correr MongoDB.
 
-correr node
+Instalación de MongoDB:
 
-```
-npm run dev 
-```
-o 
-```
-nodemon src/index.ts
-```
+`sudo apt-get install -y mongodb-org`
+
+Verificar que esté creada la carpeta y tenga permisos a usuario
+
+`data/db`
+
+Correr Base de datos:
+
+`mongod`
+
+Clonar proyecto y correr:
+
+`npm install`
+
+Luego correr en modo develop o producción
+
+Develop: 
+
+`npm run dev`
+
+o
+
+`nodemon src/index.ts`
+
+Producción
+
+`npm run start`
+
+o
+
+`npm run build && node dist/index.js`
