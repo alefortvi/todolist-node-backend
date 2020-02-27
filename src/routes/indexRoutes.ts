@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import {getAllJobs,createJob,orderById,getStates,editState} from '../controllers/jobs.index.controller';
+import {getAllJobs,createJob,orderById,getStates,editState, deleteJob} from '../controllers/jobs.index.controller';
 import multer from '../libs/multer';
 const router = Router();
 
@@ -13,9 +13,13 @@ router.route('/')
 router.route('/states')
     .get(getStates);
 
+
 // create with GET and POST
 router.route('/order')
     .get(orderById);
+
+router.route('/delete/:id')
+    .delete(deleteJob);
 
  router.route('/edit/:id')
          .put(editState);

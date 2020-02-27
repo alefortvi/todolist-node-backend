@@ -17,11 +17,15 @@ export async function getAllJobs(req : Request, res : Response) : Promise<Respon
     return res.json(jobs);
 }
 
-// export async function getPhotoByID(req : Request, res : Response) : Promise<Response> {
-//     const { id } = req.params;
-//     const photo = await Photo.findById(id);
-//     return res.json(photo);
-// }
+export async function deleteJob(req : Request, res : Response) : Promise<Response> {
+    const { id } = req.params;
+    const job = await Job.findByIdAndDelete(id);
+    const jobs = await Job.find();
+    if(job){
+        await fs.unlink(path.resolve(job.imagePath));
+    }
+    return  res.json(jobs);
+}
 
 // create new job to do
 export async function createJob(req : Request, res : Response) : Promise<Response> {
