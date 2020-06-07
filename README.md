@@ -39,6 +39,10 @@ Verificar que esté creada la carpeta y tenga permisos a usuario
 
 `data/db`
 
+PD: permisos con
+
+sudo chown $USER /vol/db
+
 Correr Base de datos:
 
 `mongod`
